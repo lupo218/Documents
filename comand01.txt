@@ -50,7 +50,7 @@ ssh -i /c/Users/lupo2/Documents/devops/Amazon/servers/test/gymso/gymso-dev-nvir.
 
 lsof # Open file 
 
-
+cron job https://crontab.guru/
 
 
 #bash
