@@ -35,6 +35,15 @@ help(mylist.insert) # get help
 
 1/2
 
+
+
+while True:
+	try:
+		guess = int(input())
+		break
+	except:
+		print('Please enter a number')
+
 print("gggg")
 print(*"wwww")
 
@@ -1078,6 +1087,8 @@ def up_low(s):
     print(f'No. of Upper case characters :{counth}')
     print(f'No. of Lower case characters :{countl}')
 
+
+https://towardsdatascience.com/python-bites-manipulating-text-files-511d1257d399
 
 with open('f:\\temp\\log.txt',"r") as my_new_file: #redd
     contetd = my_new_file.read()
