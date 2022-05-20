@@ -28,7 +28,8 @@ echo $OLDPWD # מראה נתיב קודם
 [root@db01 ~]# echo $DATABASE_PASS
 
 $? # מצב פקודה אחרונה
-
+tail -f /var/log/dmesg #read log online
+ 
 Mem=$(free -m |grep Mem |awk '{print $4}') # טעינה של פלט פקודה למשתנה
 for i in $(git log --oneline  |awk '{print $1}');do git show $i;done # $i...
 
