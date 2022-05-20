@@ -3,8 +3,14 @@ rm -rf # dell dir
 systemctl list-unit-files |grep 'enabled' #list activ service
 sudo apt update && sudo apt upgrade -y
 
+https://chmod-calculator.com/
+yum install -y unzip wget mc httpd #install on redhat
 ps -ef |grep nexus #kill process 
 kill -9 1445
+
+
+crl z # מעביר לרקע
+fg enter# מחזיר 
 
 tail -f /opt/sonatype-work/nexus3/log/nexus.log
 usermod -a -G examplegroup exampleusername #Add an Existing User Account to a Group
@@ -31,10 +37,7 @@ $? # מצב פקודה אחרונה
 tail -f /var/log/dmesg #read log online
  
 Mem=$(free -m |grep Mem |awk '{print $4}') # טעינה של פלט פקודה למשתנה
-for i in $(git log --oneline  |awk '{print $1}');do git show $i;done # $i...
-
-
-echo 'guy,lupo' |awk -F',' '{print $2}' #split
+for i in $(git log --oneline  |awk '{print $1}');do git show $i #split
 df -h |grep "\-root" |awk '{print $2}' # \ מתעלם מסימן מיוחד הבא אחריו
 
 סופר כרטיסי רשת מתעלם מ הלוקאלי
