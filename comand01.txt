@@ -7,7 +7,7 @@ ps -ef |grep nexus #kill process
 kill -9 1445
 
 tail -f /opt/sonatype-work/nexus3/log/nexus.log
-
+usermod -a -G examplegroup exampleusername #Add an Existing User Account to a Group
 
 ps -ef |grep httpd |grep -v 'grep' |awk '{print $2}' |xargs kill - kill pcoses
 dpkg -i tree_1.8.0-1_amd64.deb #debian install package 
@@ -21,6 +21,7 @@ sudo netplan apply
  ss -tunlp |grep 11211 #netstat
 curl -s https://packagecloud.io/install/repositories/rabbitmq/rabbitmq-server/script.rpm.sh | sudo bash # install from script
 
+echo $OLDPWD # מראה נתיב קודם
 
 [root@db01 ~]# vim /etc/profile # הכנה של משתנה קבוע
 [root@db01 ~]# source /etc/profile
