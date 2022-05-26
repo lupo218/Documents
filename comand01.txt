@@ -182,15 +182,8 @@ git init # הפעלה
 git config --global user.mail
 git config --global user.name
 
-git init #דוגמא
-git remote add origin https://github.com/lupo218/Documents.git #
-git pull https://github.com/lupo218/Documents.git main # שים לב לשם המקור ולשם הענף
-
-
-
-
-git remote add origin https://github.com/lupo218/Calss6-.git cd 
-git push -u origin master
+git remote add origin https://github.com/lupo218/Documents.git # חיבור לענן
+git pull https://github.com/lupo218/Documents.git main
 
 
 
