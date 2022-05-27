@@ -182,8 +182,16 @@ git init # הפעלה
 git config --global user.mail
 git config --global user.name
 
-git remote add origin https://github.com/lupo218/Calss6-.git cd 
-git push -u origin master
+git clone https://github.com/lupo218/DevOps_Class.git # חיבור לפרוייקט קיים
+git add .
+git commit -m "test" -a
+git push
+
+
+
+
+git remote add origin https://github.com/lupo218/Documents.git # חיבור לענן
+git pull https://github.com/lupo218/Documents.git main
 
 
 
