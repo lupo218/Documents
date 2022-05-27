@@ -264,11 +264,6 @@ git reset --hard
 
 
 
-
-
-
-
-
 #Jenkins
 
 set versions
@@ -294,6 +289,13 @@ pipeline {
 }
 
 
+#docker
+
+docker pull nginx:alpine # התקנה של מערכת
+docker run -d -p 80:80 nginx:alpine # הפעלה 
+docker images # סטאטוס
+docker ps -a #  וקבלה של ID מצב שרות
+docker rm -vf 9d74ad12b2e6 #מחיקה של הדוקר על מי הID 
 
 
 
