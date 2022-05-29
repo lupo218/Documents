@@ -308,9 +308,24 @@ docker run -d -p 80:80 nginx:alpine # הפעלה
 docker images # רשימה של 
 docker ps -a #  וקבלה של ID מצב שרות
 docker rm -vf 9d74ad12b2e6 #מחיקה של הדוקר על מי הID 
-docker exec -it 42e46c30c9f9 ls #הרצה של פקודה
+docker rmi nginx # remove the image file
+docker exec -it 42e46c30c9f9 ls #הרצה של פקודה  -it mean interactiv  .. not the name of the docker
 docker exec -it 42e46c30c9f9 sh # פתיחה של הדוקר בטרמינל
+docker run -it # open in interactiv 
 exit # יציאה
+
+docker run -p nginx # מריץ כתהליך חי במסךולא ברקע , עוזר למצוא תקלות
+
+docker inspect feb5d9fea6a5 #show what run in the docker
+docker inspect mysql:5.7
+
+docker run -d -P -e MYSQL_ROOT_PASSWORD=mypass mysql:5.7 # -e set variable to the running docker
+docker run -d -P -e MYSQL_ROOT_PASSWORD=mypass -p 3030:3306 -v /home/lupo/vprodbdata:/var/lib/mysql  mysql:5.7 # the local dir to the docker dir . you can find it using the docker inspect command
+
+docker inspect feb5d9fea6a5 #show what run in the docker
+docker inspect mysql:5.7
+
+
 
 docker build -t google_guy . #Dockerfile בניה
 docker log
