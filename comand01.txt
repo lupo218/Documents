@@ -1,5 +1,6 @@
 ################# Linux #######################
 rm -rf # dell dir
+du -sh <Dir> #size of dir 
 systemctl list-unit-files |grep 'enabled' #list activ service
 sudo apt update && sudo apt upgrade -y
 
@@ -299,13 +300,15 @@ pipeline {
 
 #######docker
 
+docker run hello-world # test install 
+/var/lib/docker/containers #peth
+
 docker pull nginx:alpine # התקנה של מערכת
 docker run -d -p 80:80 nginx:alpine # הפעלה 
 docker images # רשימה של 
 docker ps -a #  וקבלה של ID מצב שרות
 docker rm -vf 9d74ad12b2e6 #מחיקה של הדוקר על מי הID 
 docker exec -it 42e46c30c9f9 ls #הרצה של פקודה
-
 docker exec -it 42e46c30c9f9 sh # פתיחה של הדוקר בטרמינל
 exit # יציאה
 
