@@ -348,8 +348,30 @@ RUN pip install flask  # הרצה של פקודה בתוך הדוקר
 CMD python /app/ap.py # הפקודה שהדוקר יריץ בהפעלה
 
 
+#https://www.udemy.com/course/decodingdevops/learn/lecture/26466588#overview התקנה של שרת אנטרנט
+
+FROM ubuntu:latest
+LABEL "AUTHOR" = "GUY"
+RUN apt update
+RUN apt install apache2 git -y
+CMD ["/usr/sbin/apache2ctl","-D","FOREGROUND" ]
+EXPOSE 80
+WORKDIR /var/www/html
+VOLUME /var/log/apache2
+ADD nano.tar.gz /var/www/html   #not like copy ADD also open tha tar file  
+
+
+
+
+
+
+
+
+
 docker build -t ap #בניה של הדוקר
 docker run -d -p 5000:5000 ap # הרצה של הדוקר
+
+
 
 
 
