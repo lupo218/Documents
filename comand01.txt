@@ -330,8 +330,9 @@ RUN pip install flask  # הרצה של פקודה בתוך הדוקר
 CMD python /app/ap.py # הפקודה שהדוקר יריץ בהפעלה
 
 
-docker build -t ap #בניה של הדוקר
+docker build -t ap .  #בניה של הדוקר
 docker run -d -p 5000:5000 ap # הרצה של הדוקר
 
-
+docker logs [OPTIONS] CONTAINER 
+docker logs 5039b226c331
 
