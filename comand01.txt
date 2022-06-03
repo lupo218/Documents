@@ -326,9 +326,30 @@ docker inspect feb5d9fea6a5 #show what run in the docker
 docker inspect mysql:5.7
 
 
+#Dockerfile simpel
+FROM ubuntu:latest
+CMD ["echo", "Hello"]
 
-docker build -t google_guy . #Dockerfile בניה
+docker build -t google_guy . #בניה של דוקר לא לשכוח את הנקודה !!!
 docker log
+
+
+
+#דוגמא להרצה של דוקר שמחכה לקלט מהמשתמש
+FROM ubuntu:latest
+ENTRYPOINT ["echo"]
+
+בניה:
+docker build -t echo .
+
+הפעלה:
+docker run printer "testr"
+
+#אפשר להכניס את הפרמטר אח"כ בפקודה שניה וככה ניתן להריץ סקריפטים עם משתנים
+FROM ubuntu:latest
+ENTRYPOINT ["echo"]
+CMD ["Hlloo"]
+
 
 #דוגמא של בנית אפליקצית פייתון
 #ap.py
@@ -339,6 +360,10 @@ def hello_world():
    return 'Hello! I am a Flask application'
 if __name__ == '__main__':
    app.run(host='0.0.0.0')
+
+
+
+
 
 
 #Dockerfile
@@ -362,16 +387,14 @@ ADD nano.tar.gz /var/www/html   #not like copy ADD also open tha tar file
 
 
 
-
-
-
-
-
-
 docker build -t ap #בניה של הדוקר
 docker run -d -p 5000:5000 ap # הרצה של הדוקר
 
 
 
 
+
+
+#Docker Compose
+https://docs.docker.com/compose/gettingstarted/
 
