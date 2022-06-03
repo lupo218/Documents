@@ -363,9 +363,6 @@ if __name__ == '__main__':
 
 
 
-
-
-
 #Dockerfile
 From python:alpine
 COPY ap.py /app/
@@ -389,16 +386,12 @@ VOLUME /var/log/apache2
 ADD nano.tar.gz /var/www/html   #not like copy ADD also open tha tar file  
 
 
-
 docker build -t ap #בניה של הדוקר
 >>>>>>> 8fdcaa776d5ed1bdb8b4d3987c2713ed94b4c709
 docker run -d -p 5000:5000 ap # הרצה של הדוקר
 
 docker logs [OPTIONS] CONTAINER 
 docker logs 5039b226c331
-
-
-
 
 #Docker Compose
 https://docs.docker.com/compose/gettingstarted/
