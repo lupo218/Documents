@@ -1,5 +1,6 @@
 ################# Linux #######################
 rm -rf # dell dir
+du -sh <Dir> #size of dir 
 systemctl list-unit-files |grep 'enabled' #list activ service
 sudo apt update && sudo apt upgrade -y
 
@@ -298,19 +299,57 @@ pipeline {
 
 
 #######docker
+docker run -d -p 80:80 nginx:alpine # הפעלה 
+docker run hello-world # test install 
+/var/lib/docker/containers #peth
 
 docker pull nginx:alpine # התקנה של מערכת
-docker run -d -p 80:80 nginx:alpine # הפעלה 
+
 docker images # רשימה של 
 docker ps -a #  וקבלה של ID מצב שרות
 docker rm -vf 9d74ad12b2e6 #מחיקה של הדוקר על מי הID 
-docker exec -it 42e46c30c9f9 ls #הרצה של פקודה
-
+docker rmi nginx # remove the image file
+docker exec -it 42e46c30c9f9 ls #הרצה של פקודה  -it mean interactiv  .. not the name of the docker
 docker exec -it 42e46c30c9f9 sh # פתיחה של הדוקר בטרמינל
+docker run -it # open in interactiv 
 exit # יציאה
 
-docker build -t google_guy . #Dockerfile בניה
+docker run -p nginx # מריץ כתהליך חי במסךולא ברקע , עוזר למצוא תקלות
+
+docker inspect feb5d9fea6a5 #show what run in the docker
+docker inspect mysql:5.7
+
+docker run -d -P -e MYSQL_ROOT_PASSWORD=mypass mysql:5.7 # -e set variable to the running docker
+docker run -d -P -e MYSQL_ROOT_PASSWORD=mypass -p 3030:3306 -v /home/lupo/vprodbdata:/var/lib/mysql  mysql:5.7 # the local dir to the docker dir . you can find it using the docker inspect command
+
+docker inspect feb5d9fea6a5 #show what run in the docker
+docker inspect mysql:5.7
+
+
+#Dockerfile simpel
+FROM ubuntu:latest
+CMD ["echo", "Hello"]
+
+docker build -t google_guy . #בניה של דוקר לא לשכוח את הנקודה !!!
 docker log
+
+
+
+#דוגמא להרצה של דוקר שמחכה לקלט מהמשתמש
+FROM ubuntu:latest
+ENTRYPOINT ["echo"]
+
+בניה:
+docker build -t echo .
+
+הפעלה:
+docker run printer "testr"
+
+#אפשר להכניס את הפרמטר אח"כ בפקודה שניה וככה ניתן להריץ סקריפטים עם משתנים
+FROM ubuntu:latest
+ENTRYPOINT ["echo"]
+CMD ["Hlloo"]
+
 
 #דוגמא של בנית אפליקצית פייתון
 #ap.py
@@ -323,6 +362,10 @@ if __name__ == '__main__':
    app.run(host='0.0.0.0')
 
 
+
+
+
+
 #Dockerfile
 From python:alpine
 COPY ap.py /app/
@@ -330,9 +373,33 @@ RUN pip install flask  # הרצה של פקודה בתוך הדוקר
 CMD python /app/ap.py # הפקודה שהדוקר יריץ בהפעלה
 
 
+<<<<<<< HEAD
 docker build -t ap .  #בניה של הדוקר
+=======
+#https://www.udemy.com/course/decodingdevops/learn/lecture/26466588#overview התקנה של שרת אנטרנט
+
+FROM ubuntu:latest
+LABEL "AUTHOR" = "GUY"
+RUN apt update
+RUN apt install apache2 git -y
+CMD ["/usr/sbin/apache2ctl","-D","FOREGROUND" ]
+EXPOSE 80
+WORKDIR /var/www/html
+VOLUME /var/log/apache2
+ADD nano.tar.gz /var/www/html   #not like copy ADD also open tha tar file  
+
+
+
+docker build -t ap #בניה של הדוקר
+>>>>>>> 8fdcaa776d5ed1bdb8b4d3987c2713ed94b4c709
 docker run -d -p 5000:5000 ap # הרצה של הדוקר
 
 docker logs [OPTIONS] CONTAINER 
 docker logs 5039b226c331
+
+
+
+
+#Docker Compose
+https://docs.docker.com/compose/gettingstarted/
 
