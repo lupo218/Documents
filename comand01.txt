@@ -300,6 +300,8 @@ pipeline {
 
 #######docker
 docker run -d -p 80:80 nginx:alpine # הפעלה 
+docker run -d -p 8090:8088 --name superset apache/superset #local port:dockerport
+
 docker run hello-world # test install 
 /var/lib/docker/containers #peth
 
@@ -395,4 +397,91 @@ docker logs 5039b226c331
 
 #Docker Compose
 https://docs.docker.com/compose/gettingstarted/
+
+
+
+
+
+#################kubernetes
+
+cat .kube/config # from hom dir the cluster conf file
+minikube.exe service hello-minikube --url # get the url address
+
+kubectl get nodes
+
+kubectl get po,svc,deploy
+
+#create #https://minikube.sigs.k8s.io/docs/handbook/accessing/
+kubectl create deployment test5-deployment --image apache/superset
+kubectl expose deployment test5-deployment --type=NodePort --port=8088
+minikube.exe  service test5-deployment --url
+
+#cleen
+kubectl get svc
+kubectl delete svc hello-minikube
+kubectl get deploy
+kubectl delete deploy hello-minikube
+kubectl get pods
+kubectl delete pod 
+
+#remove cluster
+minikube.exe stop
+minikube.exe delete
+
+
+kubectl get namespaces
+kubectl get nodes -o yaml
+kubectl describe nodes
+
+kubectl get pod -o wide 
+kubectl get pod nginx -o yaml
+kubectl describe pod nginx # get log last Message
+kubectl logs nginx
+
+kubectl apply -f vproapppod.yaml
+
+#yaml
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: fe-gate
+spec:
+  selector:
+    name: nginx
+  type: NodePort
+  ports:
+  - name: foo # Actually, no port is needed.
+    port: 80
+    targetPort: 80
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx
+  labels:
+    name: nginx
+spec:
+  #hostname: frontend001
+  containers:
+  - image: nginx
+    name: nginx-container
+#cleen
+kubectl get svc
+kubectl delete svc fe-gate
+kubectl get pod
+kubectl delete pod nginx
+
+
+
+
+
+
+
+
+
+
+
+
+
 
