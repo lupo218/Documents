@@ -411,6 +411,27 @@ kubectl get nodes
 
 kubectl get po,svc,deploy
 
+#create #https://www.youtube.com/watch?v=X48VuDVv0do&t=114s
+kubectl create deployment nginx-depl --image=nginx
+
+kubectl get pod
+kubectl get deployment
+kubectl get deployment nginx -o yaml >test.yaml     get yaml file # get status 
+kubectl edit deployment #yaml יכול לשנות הגדרות הפצה אם נדרש והמערכת מעדכנת לבד את המכונות (נגיד לגרסא חדשה
+
+
+#debugin
+kubectl get pod -o wide # ip ...
+kubectl logs nginx-depl-5ddc44dd46-jd5jx
+kubectl describe pod nginx-depl-5ddc44dd46-jd5jx
+kubectl describe svc airflow-gate # בשלוב הפקודה למעלה יכול לבדוק תקנות של הפניות רשת
+https://youtu.be/X48VuDVv0do?t=4390
+
+kubectl exec -it nginx-depl-7d459cf5c8-whkb7 -- ls #run command
+kubectl exec -it nginx-depl-7d459cf5c8-whkb7 -- sh# פותח קונסול קצת מטעה בגלל שכאילו המסך ריק אבל אפשר להריץ פקודות
+
+
+
 #create #https://minikube.sigs.k8s.io/docs/handbook/accessing/
 kubectl create deployment test5-deployment --image apache/superset
 kubectl expose deployment test5-deployment --type=NodePort --port=8088
@@ -432,6 +453,7 @@ minikube.exe delete
 kubectl get namespaces
 kubectl get nodes -o yaml
 kubectl describe nodes
+kubectl get replicaset
 
 kubectl get pod -o wide 
 kubectl get pod nginx -o yaml
