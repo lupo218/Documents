@@ -406,7 +406,7 @@ https://docs.docker.com/compose/gettingstarted/
 
 cat .kube/config # from hom dir the cluster conf file
 minikube.exe service hello-minikube --url # get the url address
-
+kubectl get all
 kubectl get nodes
 
 kubectl get po,svc,deploy
@@ -416,12 +416,13 @@ kubectl create deployment nginx-depl --image=nginx
 
 kubectl get pod
 kubectl get deployment
-kubectl get deployment nginx -o yaml >test.yaml     get yaml file # get status 
+
 kubectl edit deployment #yaml יכול לשנות הגדרות הפצה אם נדרש והמערכת מעדכנת לבד את המכונות (נגיד לגרסא חדשה
 
 
 #debugin
 kubectl get pod -o wide # ip ...
+kubectl get pod --watch # see live 
 kubectl logs nginx-depl-5ddc44dd46-jd5jx
 kubectl describe pod nginx-depl-5ddc44dd46-jd5jx
 kubectl describe svc airflow-gate # בשלוב הפקודה למעלה יכול לבדוק תקנות של הפניות רשת
@@ -429,6 +430,10 @@ https://youtu.be/X48VuDVv0do?t=4390
 
 kubectl exec -it nginx-depl-7d459cf5c8-whkb7 -- ls #run command
 kubectl exec -it nginx-depl-7d459cf5c8-whkb7 -- sh# פותח קונסול קצת מטעה בגלל שכאילו המסך ריק אבל אפשר להריץ פקודות
+kubectl get deployment nginx -o yaml >test.yaml     get yaml file # get status 
+#https://youtu.be/X48VuDVv0do?t=4487
+
+
 
 
 
@@ -461,6 +466,8 @@ kubectl describe pod nginx # get log last Message
 kubectl logs nginx
 
 kubectl apply -f vproapppod.yaml
+kubectl delete -f vproapppod.yaml # מחיקה של כל הרכיבים
+#https://youtu.be/X48VuDVv0do?t=4568
 
 #yaml
 
@@ -488,6 +495,21 @@ spec:
   containers:
   - image: nginx
     name: nginx-container
+	
+	
+https://gitlab.com/nanuchi/youtube-tutorial-series/-/tree/master/demo-kubernetes-components #yaml exampl
+#https://youtu.be/X48VuDVv0do?t=4765 #demp project
+
+#Secret file 
+#https://youtu.be/X48VuDVv0do?t=4959
+ 
+echo -n 'password' |base64   # conver string to base64 secret file
+#https://youtu.be/X48VuDVv0do?t=5057
+
+
+
+
+
 #cleen
 kubectl get svc
 kubectl delete svc fe-gate
