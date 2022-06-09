@@ -406,6 +406,7 @@ https://docs.docker.com/compose/gettingstarted/
 
 cat .kube/config # from hom dir the cluster conf file
 minikube.exe service hello-minikube --url # get the url address
+kubectl cluster-info
 kubectl get all
 kubectl get nodes
 
@@ -416,6 +417,8 @@ kubectl create deployment nginx-depl --image=nginx
 
 kubectl get pod
 kubectl get deployment
+kubectl get namespace
+#https://youtu.be/X48VuDVv0do?t=6421
 
 kubectl edit deployment #yaml יכול לשנות הגדרות הפצה אם נדרש והמערכת מעדכנת לבד את המכונות (נגיד לגרסא חדשה
 
