@@ -410,6 +410,10 @@ kubectl cluster-info
 kubectl get all
 kubectl get nodes
 
+kubectl get all -n kubernetes-dashboard # see all 
+
+
+
 kubectl get po,svc,deploy
 
 #create #https://www.youtube.com/watch?v=X48VuDVv0do&t=114s
