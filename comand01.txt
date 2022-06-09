@@ -496,6 +496,37 @@ spec:
   - image: nginx
     name: nginx-container
 	
+#exsaple of LoadBalancer set up
+apiVersion: v1
+kind: Service
+metadata:
+  name: gate
+spec:
+  selector:
+    name: superset
+  type: LoadBalancer
+  ports:
+  - protocol: TCP
+    port: 8088
+    targetPort: 8088
+    nodePort: 30000 # must be  30000 -32000
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: superset
+  labels:
+    name: superset
+spec:
+  containers:
+  - image: apache/superset
+    name: superset-container	
+
+
+
+
+
+
 	
 https://gitlab.com/nanuchi/youtube-tutorial-series/-/tree/master/demo-kubernetes-components #yaml exampl
 #https://youtu.be/X48VuDVv0do?t=4765 #demp project
