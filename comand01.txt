@@ -1,3 +1,6 @@
+https://github.com/nunidoron/AdvancedDevOpsCourse
+
+
 ################# Linux #######################
 rm -rf # dell dir
 du -sh <Dir> #size of dir 
@@ -420,6 +423,9 @@ kubectl get deployment
 kubectl get namespace
 #https://youtu.be/X48VuDVv0do?t=6421
 
+kubectl create namespace jenkins
+
+
 kubectl edit deployment #yaml יכול לשנות הגדרות הפצה אם נדרש והמערכת מעדכנת לבד את המכונות (נגיד לגרסא חדשה
 
 
@@ -525,11 +531,6 @@ spec:
   - image: apache/superset
     name: superset-container	
 
-
-
-
-
-
 	
 https://gitlab.com/nanuchi/youtube-tutorial-series/-/tree/master/demo-kubernetes-components #yaml exampl
 #https://youtu.be/X48VuDVv0do?t=4765 #demp project
@@ -541,9 +542,6 @@ echo -n 'password' |base64   # conver string to base64 secret file
 #https://youtu.be/X48VuDVv0do?t=5057
 
 
-
-
-
 #cleen
 kubectl get svc
 kubectl delete svc fe-gate
@@ -552,11 +550,22 @@ kubectl delete pod nginx
 
 
 
+#volumes
+minikube ssh #login to the cluster
+kubectl get pv
+kubectl get pvc
 
 
 
 
 
+##helm
+
+helm repo add bitnami https://charts.bitnami.com/bitnami 
+helm repo add stable https://charts.helm.sh/stable
+
+
+helm install test bitnami/redis
 
 
 
