@@ -12,6 +12,7 @@ yum install -y unzip wget mc httpd #install on redhat
 ps -ef |grep nexus #kill process 
 kill -9 1445
 
+sudo -i # to root 
 
 crl z # מעביר לרקע
 fg enter# מחזיר 
@@ -84,7 +85,7 @@ echo $num1
 #!/bin/bash
 
 ls /var/run/httpd/httpd.pid &> /dev/null
-var1=$?
+var1=$? # שם לב אין רווחים !!
 
 if [ $var1 -ne 0 ] # בודק מצב של פקודה אחרונה (יש דרך טובה יותר לבדוק זה סתם לתרגיל)
 then
@@ -274,6 +275,30 @@ git reset --hard
 
 #aws
 
+https://aws.amazon.com/cli/
+pip install awscli # pycharm conect to aws console
+boto3
+
+
+C:\Users\lupo2\.aws\config
+[default]
+region = us-east-1 # חשוב מאוד עושה בעיות ולא נותן הודעת שגיאה בתהחברות
+output = json
+
+
+aws ec2 describe-instances
+aws ec2 describe-instances --filter #https://docs.aws.amazon.com/cli/latest/reference/ec2/describe-instances.html
+aws ec2 stop-instances --instances-ids xxxx xxxx
+aws ec2 start-instances --instances-ids xxxx xxxx
+
+
+
+
+
+
+
+
+
 
 
 #Jenkins
@@ -315,7 +340,7 @@ docker ps -a #  וקבלה של ID מצב שרות
 docker rm -vf 9d74ad12b2e6 #מחיקה של הדוקר על מי הID 
 docker rmi nginx # remove the image file
 docker exec -it 42e46c30c9f9 ls #הרצה של פקודה  -it mean interactiv  .. not the name of the docker
-docker exec -it 42e46c30c9f9 sh # פתיחה של הדוקר בטרמינל
+docker exec -it 42e46c30c9f9 /bin/bash # פתיחה של הדוקר בטרמינל
 docker run -it # open in interactiv 
 exit # יציאה
 
@@ -375,7 +400,8 @@ RUN pip install flask  # הרצה של פקודה בתוך הדוקר
 CMD python /app/ap.py # הפקודה שהדוקר יריץ בהפעלה
 
 
-<<<<<<< HEAD
+<<<<<<< HEADp
+
 docker build -t ap .  #בניה של הדוקר
 =======
 #https://www.udemy.com/course/decodingdevops/learn/lecture/26466588#overview התקנה של שרת אנטרנט
@@ -390,6 +416,26 @@ WORKDIR /var/www/html
 VOLUME /var/log/apache2
 ADD nano.tar.gz /var/www/html   #not like copy ADD also open tha tar file  
 
+#project get fom git
+From ubuntu:latest
+ADD templates /app/templates
+RUN apt update
+RUN apt install python3 git pip -y
+RUN git clone https://github.com/lupo218/World-of-games.git /app/git_temp
+RUN ls /app/git_temp
+RUN cp -r /app/git_temp/* /app && rm -R /app/git_temp/*
+RUN ls /app
+RUN pip install -r /app/requirements.txt
+WORKDIR /app
+#CMD python3 MainScores.py
+CMD ["python3", "MainScores.py"] #run in background
+
+
+
+
+
+
+
 
 docker build -t ap #בניה של הדוקר
 >>>>>>> 8fdcaa776d5ed1bdb8b4d3987c2713ed94b4c709
@@ -400,7 +446,7 @@ docker logs 5039b226c331
 
 #Docker Compose
 https://docs.docker.com/compose/gettingstarted/
-
+docker-compose up -d
 
 
 
@@ -554,6 +600,10 @@ kubectl delete pod nginx
 minikube ssh #login to the cluster
 kubectl get pv
 kubectl get pvc
+
+
+kubectl get storageclass
+kubectl describe storageclass
 
 
 
