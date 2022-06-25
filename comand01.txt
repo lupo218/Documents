@@ -1,3 +1,5 @@
+https://www.tabnine.com/
+
 https://github.com/nunidoron/AdvancedDevOpsCourse
 
 
@@ -6,6 +8,12 @@ rm -rf # dell dir
 du -sh <Dir> #size of dir 
 systemctl list-unit-files |grep 'enabled' #list activ service
 sudo apt update && sudo apt upgrade -y
+
+
+echo ''' #ignore next special character
+> '\''
+> '''
+
 
 https://chmod-calculator.com/
 yum install -y unzip wget mc httpd #install on redhat
@@ -342,6 +350,7 @@ docker rmi nginx # remove the image file
 docker exec -it 42e46c30c9f9 ls #הרצה של פקודה  -it mean interactiv  .. not the name of the docker
 docker exec -it 42e46c30c9f9 /bin/bash # פתיחה של הדוקר בטרמינל
 docker run -it # open in interactiv 
+docker kill  ID
 exit # יציאה
 
 docker run -p nginx # מריץ כתהליך חי במסךולא ברקע , עוזר למצוא תקלות
@@ -454,7 +463,13 @@ docker-compose up -d
 #################kubernetes
 
 cat .kube/config # from hom dir the cluster conf file
+minikube start --driver vmware
 minikube.exe service hello-minikube --url # get the url address
+minikube.exe status
+minikube ip # get the cluster ip pod Inside the cluster NOT work with localhost !!!
+
+
+
 kubectl cluster-info
 kubectl get all
 kubectl get nodes
@@ -483,6 +498,8 @@ kubectl describe pod nginx-depl-5ddc44dd46-jd5jx
 kubectl describe svc airflow-gate # בשלוב הפקודה למעלה יכול לבדוק תקנות של הפניות רשת
 https://youtu.be/X48VuDVv0do?t=4390
 
+kubectl describe cm -n monitoring prometheus-grafana-datasource
+
 kubectl exec -it nginx-depl-7d459cf5c8-whkb7 -- ls #run command
 kubectl exec -it nginx-depl-7d459cf5c8-whkb7 -- sh# פותח קונסול קצת מטעה בגלל שכאילו המסך ריק אבל אפשר להריץ פקודות
 kubectl get deployment nginx -o yaml >test.yaml     get yaml file # get status 
@@ -504,6 +521,8 @@ kubectl get deploy
 kubectl delete deploy hello-minikube
 kubectl get pods
 kubectl delete pod 
+#or
+kubectl delete  -f client-pod.yaml
 
 #remove cluster
 minikube.exe stop
@@ -523,6 +542,9 @@ kubectl logs nginx
 kubectl apply -f vproapppod.yaml
 kubectl delete -f vproapppod.yaml # מחיקה של כל הרכיבים
 #https://youtu.be/X48VuDVv0do?t=4568
+
+#update deploy image name
+kubctl set image deployment/xxx = new image name from git hub
 
 #yaml
 
