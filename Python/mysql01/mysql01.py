@@ -3,7 +3,7 @@ import random
 
 connection = pymysql.connect(host='192.168.0.5',
                              user='DBA',
-                             password='Gg442875',
+                             password='xxx',
                              database='testdb01',
                              charset='utf8mb4',
                              cursorclass=pymysql.cursors.DictCursor)
