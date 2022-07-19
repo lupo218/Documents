@@ -345,16 +345,20 @@ docker run hello-world # test install
 /var/lib/docker/containers #peth
 
 docker pull nginx:alpine # התקנה של מערכת
-
+docker ps # רשימה של דוקרים
 docker images # רשימה של 
 docker ps -a #  וקבלה של ID מצב שרות
 docker rm -vf 9d74ad12b2e6 #מחיקה של הדוקר על מי הID 
 docker rmi nginx # remove the image file
 docker exec -it 42e46c30c9f9 ls #הרצה של פקודה  -it mean interactiv  .. not the name of the docker
 docker exec -it 42e46c30c9f9 /bin/bash # פתיחה של הדוקר בטרמינל
+doker log  42e46c30c9f9
 docker run -it # open in interactiv 
 docker kill  ID
 exit # יציאה
+
+docker system prune #cleen
+
 
 docker run -p nginx # מריץ כתהליך חי במסךולא ברקע , עוזר למצוא תקלות
 
