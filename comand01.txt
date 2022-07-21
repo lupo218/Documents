@@ -463,6 +463,7 @@ docker logs 5039b226c331
 #Docker Compose
 https://docs.docker.com/compose/gettingstarted/
 docker-compose up -d
+docker-compose up --build # בניה מחדש לאחר כול שינוי בקוד
 
 
 
