@@ -352,7 +352,7 @@ docker rm -vf 9d74ad12b2e6 #מחיקה של הדוקר על מי הID
 docker rmi nginx # remove the image file
 docker exec -it 42e46c30c9f9 ls #הרצה של פקודה  -it mean interactiv  .. not the name of the docker
 docker exec -it 42e46c30c9f9 /bin/bash # פתיחה של הדוקר בטרמינל
-doker log  42e46c30c9f9
+docker log  42e46c30c9f9
 docker run -it # open in interactiv 
 docker kill  ID
 exit # יציאה
@@ -377,7 +377,7 @@ FROM ubuntu:latest
 CMD ["echo", "Hello"]
 
 docker build -t google_guy . #בניה של דוקר לא לשכוח את הנקודה !!!
-docker log
+docker logs
 
 
 
