@@ -466,6 +466,18 @@ docker-compose up -d
 docker-compose up --build # בניה מחדש לאחר כול שינוי בקוד
 
 
+version: '3'
+services:
+  redis-server:
+    image: 'redis'
+  node-app:
+    restart: always
+    build: .
+    ports:
+      - "4001:8081"
+     
+
+
 
 
 #################kubernetes
