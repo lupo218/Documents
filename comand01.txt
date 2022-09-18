@@ -3,6 +3,10 @@ https://www.tabnine.com/
 https://github.com/nunidoron/AdvancedDevOpsCourse
 
 
+pip3 freeze > requirements.txt  
+
+pyuic5 -x .\untitled.ui -o gui02.py
+
 ################# Linux #######################
 rm -rf # dell dir
 du -sh <Dir> #size of dir 
@@ -358,6 +362,7 @@ docker kill  ID
 exit # יציאה
 
 docker system prune #cleen
+docker image prune
 
 
 docker run -p nginx # מריץ כתהליך חי במסךולא ברקע , עוזר למצוא תקלות
