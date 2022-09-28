@@ -1,0 +1,13 @@
+86	V86-SSID1-GUEST	SSID1-GUEST	SSID = ”Samelet Guests” 
+PSK = Welcome2Samelet
+87	V87-SSID2-MM	SSID2-Multimedia	SSID = ”Samelet Multimedia” 
+PSK = Alfa@Subaru#20
+
+
+tracert -d -w 10 90.1.2.10
+
+Iwhat2surf!
+
+7980443
+
+שרון

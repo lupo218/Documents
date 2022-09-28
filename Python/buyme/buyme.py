@@ -7,8 +7,8 @@ import time
 driver = webdriver.Chrome(executable_path='G:\chromedriver_win32\chromedriver.exe')
 driver.get('https://buyme.co.il/?modal=login')
 # time.sleep(10)
-driver.find_element(By.XPATH, '//input[@id=\'ember1769\']').send_keys("lupo218@gmail.com") #הזדהות
-driver.find_element(By.XPATH, '//input[@id=\'ember1776\']').send_keys("Gg442875")
+driver.find_element(By.XPATH, '//input[@id=\'ember1769\']').send_keys("xx@xx.com") #הזדהות
+driver.find_element(By.XPATH, '//input[@id=\'ember1776\']').send_keys("xxx")
 driver.find_element(By.XPATH,'//*[@id="ember1785"]').click()
 
 time.sleep(1) # עמוד ראשי

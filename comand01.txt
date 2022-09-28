@@ -3,11 +3,18 @@ https://www.tabnine.com/
 https://github.com/nunidoron/AdvancedDevOpsCourse
 
 
+pip3 freeze > requirements.txt  
+
+pyuic5 -x .\untitled.ui -o gui02.py
+
 ################# Linux #######################
 rm -rf # dell dir
 du -sh <Dir> #size of dir 
 systemctl list-unit-files |grep 'enabled' #list activ service
 sudo apt update && sudo apt upgrade -y
+
+$ echo -n "Enter Password: " && head -1 </dev/stdin | tr -d '\n' | sha256sum | cut -d" " -f1  #create a hash sha256 password
+
 
 
 echo ''' #ignore next special character
@@ -342,16 +349,21 @@ docker run hello-world # test install
 /var/lib/docker/containers #peth
 
 docker pull nginx:alpine # התקנה של מערכת
-
+docker ps # רשימה של דוקרים
 docker images # רשימה של 
 docker ps -a #  וקבלה של ID מצב שרות
 docker rm -vf 9d74ad12b2e6 #מחיקה של הדוקר על מי הID 
 docker rmi nginx # remove the image file
 docker exec -it 42e46c30c9f9 ls #הרצה של פקודה  -it mean interactiv  .. not the name of the docker
 docker exec -it 42e46c30c9f9 /bin/bash # פתיחה של הדוקר בטרמינל
+docker log  42e46c30c9f9
 docker run -it # open in interactiv 
 docker kill  ID
 exit # יציאה
+
+docker system prune #cleen
+docker image prune
+
 
 docker run -p nginx # מריץ כתהליך חי במסךולא ברקע , עוזר למצוא תקלות
 
@@ -370,7 +382,7 @@ FROM ubuntu:latest
 CMD ["echo", "Hello"]
 
 docker build -t google_guy . #בניה של דוקר לא לשכוח את הנקודה !!!
-docker log
+docker logs
 
 
 
@@ -456,6 +468,19 @@ docker logs 5039b226c331
 #Docker Compose
 https://docs.docker.com/compose/gettingstarted/
 docker-compose up -d
+docker-compose up --build # בניה מחדש לאחר כול שינוי בקוד
+
+
+version: '3'
+services:
+  redis-server:
+    image: 'redis'
+  node-app:
+    restart: always
+    build: .
+    ports:
+      - "4001:8081"
+     
 
 
 
@@ -473,6 +498,10 @@ minikube ip # get the cluster ip pod Inside the cluster NOT work with localhost 
 kubectl cluster-info
 kubectl get all
 kubectl get nodes
+
+kubectl get all -n kubernetes-dashboard # see all 
+
+
 
 kubectl get po,svc,deploy
 

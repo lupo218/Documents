@@ -1,0 +1,1057 @@
+Jupyter Notebook
+Untitled
+Last Checkpoint: Last Thursday at 11:11 AM
+(autosaved)
+Current Kernel Logo
+Python 3 
+File
+Edit
+View
+Insert
+Cell
+Kernel
+Widgets
+Help
+
+help(mylist.insert) # get help
+
+7 % 4
+7 % 4
+
+23 % 2
+23 % 2
+
+2**3
+2**3
+
+5 * 20
+5 * 20
+
+1/2
+
+print("gggg")
+print(*"wwww")
+
+t
+print("helo \nguy\tlupo")
+
+len("helo guy lupo")
+
+mystring
+mystring = "Hllow World"
+
+mystring
+
+mystring[-2]
+
+1,-2
+mystring[1,-2]
+
+1,2
+mystring[1,2]
+
+:
+mystring[5:]
+
+mystring[6:]
+
+:6
+mystring[:6]
+
+:5
+mystring[:5]
+
+2:7
+mystring[2:7]
+
+: :2
+mystring[: :2]
+
+2:8:2
+mystring[2:8:2]
+
+: :-1
+mystring[: :-1]
+
+mystring[-3]
+
+mystring
+mystring = 'Hello World'
+
+mystring
+
+-3
+mystring[-3]
+
+-3
+'Hello World'[-3]
+
+'tinker'[2:4]
+
+​
+
+name = "guy"
+
+name
+
+2:
+name[2:]
+
+name[1:]
+
+"l" + name[1:]
+
+name
+name
+
+name + " lupo"
+name + " lupo"
+
+name
+name = name + " lupo"
+
+*10
+name *10
+
+name + " "
+name + " "
+
+name *10
+name *10
+
+name
+
+name = name + " "
+
+name
+name
+
+name *10
+name *10
+
+name
+name
+
+name.upper()
+name.upper()
+
+1
+name.upper(1)
+
+1
+name.upper("1")
+
+name
+name
+
+name.split()
+
+(name.split("")).split("g")
+(name.split("")).split("g")
+
+s='hello'
+
+s[1]
+s[1]
+
+s[0]
+
+s='Sammy'
+
+s[2:]
+s[2:]
+
+s[2:]
+
+1
+s[:1]
+
+-1
+s[:-1]
+
+s[: :-1]
+s[: :-1]
+
+s[: :1]
+
+print('the {a} {b} {c}'.format(a='fox',b='brown',c='quick'))
+
+resulte
+resulte = 100/7777
+
+)
+(resulte):1.3f
+
+6
+print("the number was {r:1.6f}".format(r=resulte))
+
+f
+print(f'guy go to {3+6}')
+
+print("Python {g}{h}".format(g='rules',h='!'))
+print("Python {g}{h}".format(g='rules',h='!'))
+
+my_list
+my_list = ['guy',2,5.5]
+
+list(my_list)
+
+len(my_list)
+
+my_list
+my_list[::1]
+
+my_list
+my_list[0] = 'lupo'
+
+')
+my_list.append('guy')
+
+guy
+my_list.remove('guy')
+
+my_list
+my_list.pop(1)
+
+my_list
+
+my_list2 = ['a','c','b','e','d']
+my_list2 = ['a','c','b','e','d']
+
+my_list2
+
+my_list2
+my_list2.sort()
+
+my_list2
+
+type(my_list3)
+
+my_list3 = None
+
+my_list2
+my_list2.append([3,4])
+
+my_list2
+
+prices_l = {'ap':56,'ggg':100000}
+prices_l = {'ap':56,'ggg':100000}
+
+prices_l
+prices_l['apg'] = 300
+
+prices_l['ggg']
+
+ces_l.items()
+prices_l.items()
+
+prices_l['oreng'].upper()
+
+prices_l.keys()
+
+set1 =('Parallel')
+
+set1
+set1
+
+*
+set1.split("*")
+
+type('set1')
+
+set1 = ()
+
+myset = set()
+myset = set()
+
+type(myset)
+
+'
+myset.add('Parallel')
+
+myset
+myset
+
+myset.
+myset.union()
+
+myset
+myset(0)
+
+(myset).split()
+
+mylist = (myset)
+
+mylist.split(" ")
+
+mylist
+type(mylist)
+
+s = "foobar"
+
+list(s)
+l = list(s)
+
+l
+print l
+
+l
+
+list(s)
+
+"
+list("myset")
+
+myset = set()
+
+myset.add('Parallel')
+myset.add('Parallel')
+
+list("myset")
+list("myset")
+
+myset.symmetric_difference()
+
+mylist4
+mylist4 = list("myset")
+
+)
+mydics = (mylist4)
+
+mydics
+
+guy
+print(set('guy'))
+
+set('Mississippi'))
+print(set('Mississippi'))
+
+set('Missi
+
+mylist
+
+myset = set()
+
+Mississippi
+myset.add('Mississippi')
+
+myset
+set("myset")
+
+print(set("myset")).sort
+
+myset
+
+print(myset.symmetric_difference())
+
+mylist4
+mylist4 = 'Mississippi'
+
+mylist4
+mylist4
+
+set(list(mylist4))
+set(list(mylist4))
+
+set(list('Mississippi'))
+set(list('Mississippi'))
+
+]
+list('Mississippi')[3]
+
+pwd
+pwd
+
+mylist = list('Mississippi')
+
+num = 0
+for letter in mylist:
+    if letter == 's' or letter == 'i':
+        num+= 1
+        print(f'the letter is: {letter} {num}')
+
+the letter is: i 1
+the letter is: s 2
+the letter is: s 3
+the letter is: i 4
+the letter is: s 5
+the letter is: s 6
+the letter is: i 7
+the letter is: i 8
+
+
+
+
+
+%%writefile myfile.txt
+Hello this is a txt file
+this is the second line
+this is the third line
+
+'
+myfile = open('myfile.txt')
+
+print(myfile)
+
+myfile.read()
+
+0
+myfile.seek(0)
+
+myfile.close()
+
+with open('myfile.txt') as my_new_file:
+    contents = my_new_file.read()
+
+contents
+
+THREE ON THE THIRD
+%%writefile my_new_file2.txt
+ONE ON THE FIRST
+TOW ON THE SECOND
+THREE ON THE THIRD
+
+with open('my_new_file2.txt',mode='r') as f:
+    print(f.read())
+with open('my_new_file2.txt',mode='r') as f:
+    print(f.read())
+
+with open('my_new_file2.txt',mode='a') as f:
+    f.write('\nthe next line')
+
+with open('my_new_file2.txt',mode='r') as f:
+    print(f.read())
+
+8,9
+list4 = [3,5,7,8,9]
+
+sorted(list4)
+
+ 2
+1 == 2
+
+2 != 3
+2 != 3
+
+1
+if 2>1:
+    print('ggg')
+
+hungry = True
+if hungry:
+    print('ggg')
+hungry = True
+if hungry:
+    print('ggg')
+
+hungry = False
+if hungry:
+    print('ggg')
+else:
+    print('llll')
+
+loc = 'Bank'
+if loc == 'garaz':
+    print('garaz')
+elif loc == 'banck':
+    print('banck')
+elif loc == 'Bank':
+    print('Bank')
+else:
+    print('Error')
+
+mylist = [1,2,3,4,5,6,7,8,9,10]
+​
+​
+​
+
+x = 0
+while x < 5:
+    if x==3:
+        break
+    print(x)
+    x+= 1
+0
+1
+2
+
+num
+for num in range(0,11,2):
+    print(num)
+0
+2
+4
+6
+8
+10
+
+list(range(10))
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+​
+index_count = 0
+word = 'abc'
+for letter in word:
+    print(f'"At index {index_count} the lettr is {letter}"')
+    index_count  += 1
+	
+	"At index 0 the lettr is a"
+	"At index 1 the lettr is b"
+	"At index 2 the lettr is c"
+	
+	
+
+index_count = 0
+word = 'abc'
+for letter in word:
+    print(f'"at index {a} the letter is{b}".(a = index_count,b = letter)')
+    index_count  += 1
+	
+index_count = 0
+word = 'abc'
+for letter in word:
+    print('At index {} the lettr is {}'.format(index_count,letter))
+    index_count  += 1
+	
+At index 0 the lettr is a
+At index 1 the lettr is b
+At index 2 the lettr is c
+	
+	index_count = 0
+word = 'abc'
+for letter in word:
+    print(word[index_count])
+    index_count  += 1
+a
+b
+c
+
+word = 'abcde'
+for index,letter in enumerate(word):
+    print(index)
+    print(letter)
+	
+a
+1
+b
+2
+c
+3
+d
+4
+e
+
+mylist1 = [1,2,3,]
+mylist2 = ['a','b','c']
+for item in zip(mylist1,mylist2):
+    print(item)
+	
+(1, 'a')
+(2, 'b')
+(3, 'c')
+
+list(zip(mylist1,mylist2))
+
+[(1, 'a'), (2, 'b'), (3, 'c')]
+
+'x' in ['a','b','c','x']
+True
+
+d = {'mykey':345}
+345 in d.values()
+
+True
+
+mylist = [10,20,30,40,50]
+print(min(mylist))
+print(max(mylist))
+
+10
+50
+
+
+from random import shuffle #יבוא ספריה
+mylist = [1,2,3,4,5,6,7,8,9]
+shuffle(mylist) # מחולל רנדומאלי
+print(mylist)
+
+[8, 1, 3, 9, 5, 7, 6, 4, 2]
+
+from random import randint
+randint(0,1000) #מחולל מספר רנדומלי מסויים מטווח
+
+844
+
+resulte = input('Enter a number')  # מקבל ערך מהמשתמש
+
+int(resulte) # string to int 
+
+mylist = [x for x in 'word']
+print(mylist)
+
+['w', 'o', 'r', 'd']
+
+mylist = [num for num in range(0,11)]
+print(mylist)
+
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+mylist = [num**2 for num in range(0,11)] #ניתן לבצע פעולות מתמתיות כבר בתוך הפקוה עצמה
+print(mylist)
+
+[0, 1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+
+mylist = [x for x in range(0,11) if x%2==0] # וכל פעולה אחרת לדוגמא להוציא רק מספק זוגי
+print(mylist)
+
+[0, 2, 4, 6, 8, 10]
+
+
+[x for x in range(1,51) if x%3 == 0] # Use List comprehension to create a list of all numbers between 1 and 50 that are divisible by 3
+
+
+
+st = 'Print only the words that start with s in this sentence'
+[x for x in st.split(" ") if x[0] == 's']  # get all word  that start with S
+[x for x in st.split(" ") if 's' in x] # get all word that contin S
+
+
+Go through the string below and if the length of a word is even print "even!
+st = 'Print every word in this sentence that has an even number of letters'
+
+for word in st.split(" "):
+    if len(word)%2==0:
+        print(word+'  even')
+		
+		word  even
+in  even
+this  even
+sentence  even
+that  even
+an  even
+even  even
+number  even
+of  even
+		
+
+Write a program that prints the integers from 1 to 100. But for multiples of three print "Fizz" instead of the number, and for the multiples of five print "Buzz". For numbers which are multiples of both three and five print "FizzBuzz".
+
+
+for num in range(1,101):
+    if num % 3 == 0 and num % 5 == 0:
+        print("FizzBuzz")
+    elif num % 3 == 0:
+        print("Fizz")
+    elif num % 5 == 0:
+        print("Buzz")
+    else:
+        print(num)
+		
+Use a List Comprehension to create a list of the first letters of every word in the string below:
+	st = 'Create a list of the first letters of every word in this string'
+	[word[0] for word in st.split()]
+	['C', 'a', 'l', 'o', 't', 'f', 'l', 'o', 'e', 'w', 'i', 't', 's']
+	
+	def myfunc(*args):      # infenet args 
+    print(args)
+	
+	def myfunc(**kwargs):
+           print(kwargs)
+		   
+
+def myfunc(*args , **kwargs):
+    print(kwargs)
+    print(args)
+
+myfunc(10,20,30 ,veggiv =  'lettuce' ,guy = 'lupo')	
+	
+	
+	
+	def say_hello(name='name'): # defult vale for var
+    '''
+    Simpel function 
+    '''
+    print('Hallo '+ name)
+	
+	
+	def say_hello(name='name'):
+    '''
+    Simpel function 
+    '''
+    if name =='name':
+        return 'Erro you need to write a name'
+    else:
+        return 'hello: '+ name
+	
+	
+	
+	
+	mylist = [('guy',44),('ira',41),('Yuval',11)]
+	for a,b in mylist:
+    print(f"name: {a}")
+    print (f"Age: {b}")
+	
+	
+name: guy
+Age: 44
+name: ira
+Age: 41
+name: Yuval
+Age: 11
+
+
+d = {'k1':1,'k2':2,'k3':3}
+
+for a,b in d.items():
+    print(a)
+	
+k1
+k2
+k3	
+
+
+x = [1,2,3]
+for _ in x:
+    "Error"
+    pass      # by pass code 
+print('end')
+
+
+x = [1,2,3,4,5]
+for _ in x:
+    if _ == 2:
+        continue # skip code like the val 2 in this case
+    print(_)
+1
+3
+4
+5	
+	
+x = [1,2,3,4,5]
+for _ in x:
+    if _ == 4:
+        break  # stop the loop
+    print(_)
+	
+1
+2
+3	
+
+
+'guy' in ['ira','yuvl','guy'] #check if item is in the list
+True
+
+
+
+mystring = 'world'
+mylist = [x for x in  mystring]
+mylist
+['w', 'o', 'r', 'l', 'd']
+
+mylist = [x for x in  mystring if x == 'w']
+mylist
+['w']
+
+celcius = [x for x in range(0,40)]
+fahrenhit = [((9/5)*temp + 32) for temp in celcius]
+print([int(x) for x in fahrenhit])
+
+[32, 33, 35, 37, 39, 41, 42, 44, 46, 48, 50, 51, 53, 55, 57, 59, 60, 62, 64, 66, 68, 69, 71, 73, 75, 77, 78, 80, 82, 84, 86, 87, 89, 91, 93, 95, 96, 98, 100, 102]
+	
+mylist = []
+
+for x in [2,4,6]:
+    for y in [1,10,1000]:
+        mylist.append(x*y)
+mylist	
+[2, 20, 2000, 4, 40, 4000, 6, 60, 6000]	
+	
+word = ['sara','guy','ira']
+for x in word:
+    if 's' in x:
+        print(x)	
+	
+	
+or
+
+print([x for x in word if 's' in x])
+
+	
+st = 'Print only the words that start with s in this sentence'
+print([x for x in newlist if x.startswith('s')])
+
+or 
+
+for x in st.split():
+    if x [0] == 's':
+        print(x)
+	
+	
+st = 'Print every word in this sentence that has an even number of letters'
+
+newlist = st.split(" ")
+
+for x in newlist:
+    n = (list(x))
+    if len(x) %2==0:
+        print(len(x))
+	
+st = 'Create a list of the first letters of every word in this string'
+newlist = st.split(" ")
+newstrin = []
+for x in newlist:
+   newstrin.append(x[0])
+print(newstrin)	
+	
+	def f1(name='name'):
+    '''
+    data
+    '''
+    print('hello: ' + name)
+	
+def word (string,lettr):
+    if lettr in string:
+        print('yes')
+    else:
+        print('no')
+		
+def is_even(n):
+    if n%2 == 0:
+        return True
+    else:
+        return Fals
+		
+		
+		
+		
+def myfunc(*args,**kwargs): #get multi values int and string
+    print(args)
+    print(kwargs)
+
+myfunc(10,20,fruit='orange')
+(10, 20)
+{'fruit': 'orange'}	
+
+
+
+def myfunc(*args):   # return int that is even number
+    mylist = []
+    for _ in args:
+        if _ %2 == 0:
+            mylist.append(_)
+    return mylist
+
+	
+	
+def myfunc(x):
+    count = 0
+    strt = ''
+    for lettr in x:
+        count += 1
+        if count %2 == 0:
+            strt = strt + lettr.upper()
+        else:
+            strt = strt + lettr.lower()
+    return strt
+
+	def lesser_of_two_evens(a,b):
+    if a%2 == 0 and b%2 == 0:
+        return min(a,b)
+    else:
+        return max(a,b)
+		
+ANIMAL CRACKERS: Write a function takes a two-word string and returns True if both words begin with same letter
+		
+def animal_crackers(text):
+    if text.split(" ")[0][0] == text.split(" ")[1][0]:
+        return(True)
+    else:
+        return(False)
+
+# or
+		
+
+def animal_crackers(text):
+    wordlist = text.split()
+    return wordlist[0][0] == wordlist[1][0]
+	
+	
+	
+MAKES TWENTY: Given two integers, return True if the sum of the integers is 20 or if one of the integers is 20. If not, return False
+def makes_twenty(n1,n2):
+    mylist = [n1,n2]
+    return(sum(mylist) == 20)
+	
+MASTER YODA: Given a sentence, return a sentence with the words reversed	
+def master_yoda(text):
+    return ' '.join(text.split()[::-1])
+	
+test = 'guy lupo'
+word = test.split()	
+word	
+['guy', 'lupo']
+'>>>'.join(word)  # join fill the gap with '>>>' 
+'guy>>>lupo'
+	
+	
+	
+	
+Given a list of ints, return True if the array contains a 3 next to a 3 somewhere.	
+def has_33(nums):
+    count =0
+    mydict = {}
+    for x in nums:
+        count += 1
+        mydict.update({count:x})
+    for num in range(1,(len(mydict)+1)):
+       #print(mydict[num])
+       if mydict[num] == 3 and mydict[num -1] ==3:
+        return True
+        break
+    else:
+        return False
+
+
+#or
+	def has_33(nums):
+    for i in range(0, len(nums)-1):
+      
+        # nicer looking alternative in commented code
+        #if nums[i] == 3 and nums[i+1] == 3:
+    
+        if nums[i:i+2] == [3,3]:
+            return True  
+    
+    return False	
+
+
+PAPER DOLL: Given a string, return a string where for every character in the original there are three characters-	
+def paper_doll(text):
+    out = ''
+    for letter in text:
+          out += letter *3
+    return out
+	
+BLACKJACK: Given three integers between 1 and 11, if their sum is less than or equal to 21, return their sum. If their sum exceeds 21 and there's an eleven, reduce the total sum by 10. Finally, if the sum (even after adjustment) exceeds 21, return 'BUST'
+
+def blackjack(a,b,c):
+    
+    if sum((a,b,c)) <= 21:
+        return sum((a,b,c))
+    elif sum((a,b,c)) <=31 and 11 in (a,b,c):
+        return sum((a,b,c)) - 10
+    else:
+        return 'BUST'
+		
+SUMMER OF '69: Return the sum of the numbers in the array, except ignore sections of numbers starting with a 6 and extending to the next 9 (every 6 will be followed by at least one 9). Return 0 for no numbers.
+
+def summer_69(*arr):
+    mylist = [0]
+    for num in arr:
+        for num in num:
+            if num < 6 or num > 9:
+                mylist.append(num)
+    return(sum(mylist))
+	
+#or
+
+
+def summer_69(arr):
+    total = 0
+    add = True
+    for num in arr:
+        while add:
+            if num != 6:
+                total += num
+                break
+            else:
+                add = False
+        while not add:
+            if num != 9:
+                break
+            else:
+                add = True
+                break
+    return total
+	
+def almot_there(n):
+    return (abs(100-n) <=10) or (abs(200-n) <=10)  # abs  = the abselot vlaue 
+
+##filter
+def check_even(num):
+    return num%2 ==0
+	
+mynums = [1,2,3,4,5,6]
+
+list(filter(check_even,mynums))
+[2, 4, 6]
+
+#or
+
+for n in filter(check_even,mynums):
+    print(n)
+
+2
+4
+6
+	
+##map
+
+list(map(check_even,mynums))
+[False, True, False, True, False, True]	
+#or
+for n in map(check_even,mynums):
+    print(n)
+
+False
+True
+False
+True
+False
+True
+
+
+
+
+def qsuare(num):
+    return num**2  #simpel fun that return squwer 2
+
+	
+	qsuare(4)	
+	16
+	
+###convert to lambda >>
+
+qsuare = lambda num: num**2
+
+mynums = [1,2,3,4,5,6]
+list(map(qsuare,mynums))
+	
+or
+
+list(map(lambda num:num**2,mynums))  # no need to write the fun 
+
+test2 = [int(x) for x in test.split() if x.isdigit()] ## split int from string
+
+Write a function that computes the volume of a sphere given its radius.
+
+def vol(rad):
+    #val= [float(x) for x in rad.split() if x.isdigit()]
+    return ([float(x) for x in rad.split() if x.isdigit()][0]**2)*3.14
+
+
+
+Write a Python function that accepts a string and calculates the number of upper case letters and lower case letters.
+
+def up_low(s):
+    countl = 0
+    counth = 0
+    for x in s:
+        if x.isupper():
+            counth += 1
+        if x.islower():
+            countl += 1
+    print(f'No. of Upper case characters :{counth}')
+    print(f'No. of Lower case characters :{countl}')
+
+	
