@@ -7,6 +7,8 @@ pip3 freeze > requirements.txt
 
 pyuic5 -x .\untitled.ui -o gui02.py
 
+cmd /c python f:\script\ENV\FTP_Malam\FTP02.py
+
 ################# Linux #######################
 rm -rf # dell dir
 du -sh <Dir> #size of dir 
